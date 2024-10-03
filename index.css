@@ -1,0 +1,23 @@
+
+.carousel img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: 500px;
+}
+.carousel-caption{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.klink{
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color:whitesmoke;
+    border: 1px groove black;
+    border-radius: 5px;
+    font-size: larger;
+    margin-top: auto;
+    
+}
