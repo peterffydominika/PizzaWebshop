@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisállat webshop</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="kepek/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="kepek/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="kepek/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="kepek/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="kepek/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="kepek/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="kepek/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="kepek/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="kepek/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="kepek/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="kepek/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="kepek/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="kepek/favicon/favicon-16x16.png">
+    <link rel="manifest" href="kepek/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+</head>
+<body>
+    <script>
+        // Amikor a felhasználó elér egy bizonyos pontot az oldalon, a felfele nyíl gomb megjelenik
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("felfele-gomb").style.display = "block";
+            } else {
+                document.getElementById("felfele-gomb").style.display = "none";
+            }
+        }
+
+        // Amikor a felhasználó megnyomja a gombot, az oldal felgörget a tetejére
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    
+    <ul class="navbar-nav mx-auto">
+        <div class="user_option">
+            <a href="index.html" class="klink">
+                Kezdőlap
+            </a>
+            <a href="index.html" class="klink">
+                Főoldal
+            </a>
+            <a href="reg.html" class="nav-item nav-link klink">
+                Regisztráció
+            </a>
+            <a href="bej.html" class="nav-item nav-link klink">
+                Bejelentkezés
+            </a>
+        </div>
+    </ul>
+    <div style="margin: 5%; text-align: center;">
+        <form action="javascript:void(0)">
+            <h2>Adatok:</h2><p>Név:</p><input id="kos" type="text" placeholder="Kandó Kálmán" required>
+            <p>E-mail:</p><input id="kos" type="email" placeholder="kandok@kkszki.hu" required>
+            <p>Tel:</p><input id="kos" type="tel" placeholder="+36308813082" required>
+            <p>Város:</p><input id="kos" type="text" placeholder="Miskolc" required>
+            <p>Utca:</p><input id="kos" type="text" placeholder="Palóczy utca" required>
+            <p>Szám:</p>
+            <input id="kos" type="text" placeholder="3" required>
+            <p>Kártyabirtokos neve:</p>
+            <input id="kos" type="text" placeholder="Kandó Kálmán" required>
+            <p>Kártyaszám:</p>
+            <input id="kos" type="text" placeholder="0000-0000-0000-0000" required>
+            <p>Lejárati hó:</p>
+            <input id="kos" type="text" placeholder="02" required >
+            <p>Lejárti év:</p>
+            <input id="kos" type="text" placeholder="2025" required>
+            <p>CVV:</p>
+            <input  id="kos" type="text" placeholder="123" required> <br>
+            <input type="checkbox" required>Elfogadom az ÁSZF <br>
+            <br><input style="font-size: 100%;" type="submit" onclick="fizetes()">
+            <br>
+            
+        </form>
+        <br>
+        <button onclick="torles()" style="width: 150px; font-size: 150%;">TÖRLÉS</button>
+        <button onclick="kosar()" style="width: 250px; font-size: 150%;">KOSÁR TARTALMA:</button>
+        <br>
+        <br>
+        <table border="3px" id="tabla" style="width:40%; margin: auto; ">
+
+        </table>
+        <br>
+        <div class="visa">
+        <p style="background-color: lightblue; width: 500px; margin: auto; font-size: 200%;">Elfogadott fizetési lehetőségek:</p>
+        <img src="img/visa.png" style="width: 170px; height: 100px;"><p style="background-color: lightblue; width: 200px; margin: auto; font-size: 210%;">Utánvét</p>
+        </div>
+        <button onclick="scrollToTop()" id="felfele-gomb" title="Feljebb" style="font-size: 150%;">
+            👆
+        </button>
+    </div>
+    <script src="tap.js"></script>
+</body>
+</html>
