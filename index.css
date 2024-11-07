@@ -1,4 +1,7 @@
 
+body{
+    background-color: #B22222;
+}
 .carousel img{
     margin-left: auto;
     margin-right: auto;
@@ -20,4 +23,19 @@
     font-size: larger;
     margin-top: auto;
     
+}
+.boxt img{
+    width: 170px;
+}
+.boxt{
+    width: 200px;
+    height: 600px;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 10%;
+    text-align: center;
+    background-color: rgb(63, 10, 10);
+    color: white;
 }
