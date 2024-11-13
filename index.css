@@ -39,3 +39,30 @@ body{
     background-color: rgb(63, 10, 10);
     color: white;
 }
+#felfele-gomb {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+    padding-top: 15px;
+    font-weight: 800;
+    background-color: #464545;
+    color: rgba(245, 245, 245, 0.699);
+    text-align: center ;
+    height: 36px;
+  }
