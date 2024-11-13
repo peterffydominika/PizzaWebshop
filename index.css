@@ -65,4 +65,9 @@ body{
     color: rgba(245, 245, 245, 0.699);
     text-align: center ;
     height: 36px;
-  }
+}
+#rendeles{
+    text-align: center;
+    margin-left: 25%;
+    margin-right: auto;
+}
