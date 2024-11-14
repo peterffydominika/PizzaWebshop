@@ -27,13 +27,28 @@ body{
 .boxt img{
     width: 170px;
 }
+.boxr img{
+    width: 170px;
+}
 .boxt{
     width: 200px;
-    height: 400px;
+    height: 450px;
     float: left;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 20px;
+    border-radius: 10%;
+    text-align: center;
+    background-color: rgb(63, 10, 10);
+    color: white;
+}
+.boxr{
+    width: 200px;
+    height: 250px;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 40px;
     border-radius: 10%;
     text-align: center;
     background-color: rgb(63, 10, 10);
@@ -67,7 +82,18 @@ body{
     height: 36px;
 }
 #rendeles{
+    width: 500px;
     text-align: center;
-    margin-left: 25%;
-    margin-right: auto;
+    margin-left: 35%;
+    margin-right: 25%;
 }
+#rolunk{
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 25%;
+    width: 830px;
+}
+#rendeles img{
+    height: 150px;
+}
+
