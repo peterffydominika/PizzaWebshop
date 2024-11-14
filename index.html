@@ -31,8 +31,32 @@
 <h1 style="color: azure;">Üdvözlünk a PizzaWebshop oldalán!</h1>
 <br>
 <body style="background-color: #B22222;">
+    <script>
+        // Amikor a felhasználó elér egy bizonyos pontot az oldalon, a felfele nyíl gomb megjelenik
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("felfele-gomb").style.display = "block";
+            } else {
+                document.getElementById("felfele-gomb").style.display = "none";
+            }
+        }
+
+        // Amikor a felhasználó megnyomja a gombot, az oldal felgörget a tetejére
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <button onclick="scrollToTop()" id="felfele-gomb" title="Feljebb" style="font-size: 150%;">
+        👆
+    </button>
     <ul>
         <div>
+            <a href="index.html" class="klink" style="background-color: rgb(90, 21, 21); color: blue;">
+                Kezdőlap
+            </a>
             <a href="rendeles.html" class="klink" style="background-color: rgb(90, 21, 21);">
                 Tovább a webshopba
             </a>
@@ -68,7 +92,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="kepek/allas.png" alt="valami" class="d-block">
+                <a href="allas.html"><img src="kepek/allas.png" alt="Állás" class="d-block"></a>
             </div>
             <div class="carousel-item">
                 <img src="kepek/valami2.png" alt="valami2" class="d-block">
@@ -79,10 +103,20 @@
         </div>
     </div>
     <div class="content" id="rendeles">
-        <div class="boxt"><a href="pizza.html"><img src="kepek/pizza25cm2.png" style="margin-top: 10px;"></a><h2>Pizzáink</h2></div>
+        <div class="boxr"><a href="pizza.html"><img src="kepek/pizza25cm2.png" style="margin-top: 10px;"></a><br><h2>Pizzáink</h2></div>
 
-        <div class="boxt"><a href="uccsi.html"><img src="kepek/uccsi1.png"></a><h2>Üdítőink</h2></div>
+        <div class="boxr"><a href="uccsi.html"><img src="kepek/uccsi1.png" style="margin-top: 10px;"></a><br><h2>Üdítőink</h2></div>
+        <br>
     </div>
+    <br>
+    <div class="content" id="rolunk">
+        <br>
+        <h2 style="color: white;">Csapatunk</h2>
+        <div class="boxr"><img src="kepek/martin.png" style="margin-top: 10px;"><h2>Kamecz Martin</h2></div>
+        <div class="boxr"><img src="kepek/akos.png" style="margin-top: 10px;"><h2>Hegymegi-Kiss Ákos</h2></div>
+        <div class="boxr"><img src="kepek/dominika.png" style="margin-top: 10px;"><h2>Péterffy Dominika</h2></div>
+    </div>
+
     <div class="footer">
         <p style="color: white;">A képek a <a target="_blank" href="https://wolt.com/hu/hun/budapest/venue/princess-bakery-bistro-kki/items/pizzak-ajandek-025l-es-xixo-mojitoval-1">wolt</a> weboldalról származnak.</p>
     </div>
