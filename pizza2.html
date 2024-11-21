@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzák</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.html">
+    <link rel="apple-touch-icon" sizes="57x57" href="kepek/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="kepek/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="kepek/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="kepek/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="kepek/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="kepek/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="kepek/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="kepek/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="kepek/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="kepek/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="kepek/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="kepek/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="kepek/favicon/favicon-16x16.png">
+    <link rel="manifest" href="kepek/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body style="background-color:#B22222;">
+    <script>
+        // Amikor a felhasználó elér egy bizonyos pontot az oldalon, a felfele nyíl gomb megjelenik
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("felfele-gomb").style.display = "block";
+            } else {
+                document.getElementById("felfele-gomb").style.display = "none";
+            }
+        }
+
+        // Amikor a felhasználó megnyomja a gombot, az oldal felgörget a tetejére
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <button onclick="scrollToTop()" id="felfele-gomb" title="Feljebb" style="font-size: 150%;">
+        👆
+    </button>
+    <ul >
+        <div class="user_option">
+            <a href="index.html" class="klink" style="background-color: #00FFFF;">
+                Kezdőlap
+            </a>
+            <a href="index.html" class="klink" style="background-color: #00FFFF;">
+                Főoldal
+            </a>
+            <a href="kosar.html" class="klink" style="background-color: #00FFFF;">
+                Kosár
+            </a>
+            <a href="reg.html" class="klink" style="background-color: #00FFFF;">
+                Regisztráció
+            </a>
+            <a href="bej.html" class="klink" style="background-color: #00FFFF;">
+                Bejelentkezés
+            </a>
+            <a href="kutya.html" class="klink" style="background-color: #00FFFF;">
+                Vissza
+            </a>
+        </div>
+    </ul>
+    <div class="content">
+        <div class="boxt"><img src="kepek/Pepperoni.jpg"><h2 id="nev">Szalámis pizza</h2><p>Összetevők: pizzaszósz, szalámi, pepperoni, sajt</p><p>Méret: 24 cm</p><p>Ár: 2.500 Ft</p><input type="number" name="Mennyiség" id="q1" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Szalámis Pizza",Number(document.getElementById("q1").value),3570); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="kepek/margherita.png"><h2 id="nev">Margherita pizza</h2><p>Összetevők: pizzaszósz, mozzarella, bazsalikom</p><p>Méret: 24 cm</p><p>Ár: 2.500 Ft</p><input type="number" name="Mennyiség" id="q2" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Margherita pizza",Number(document.getElementById("q2").value),3570); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="kepek/Prosciutto.jpg"><h2 id="nev">Prosciutto pizza</h2><p>Összetevők: pizzaszósz, mozzarella, főtt sonka, bazsalikom</p><p>Méret: 24 cm</p><p>Ár: 2.500 Ft</p><input type="number" name="Mennyiség" id="q3" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Prosciutto pizza",Number(document.getElementById("q3").value),3570); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="kepek/Profumo.jpg"><h2 id="nev">Profumo pizza</h2><p>Összetevők: pizzaszósz, mozzarella, főtt sonka, gomba, kukorica, oregano</p><p>Méret: 24 cm</p><p>Ár: 2.500 Ft</p><input type="number" name="Mennyiség" id="q4" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Profumo pizza",Number(document.getElementById("q4").value),3570); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="kepek/hawaii.jpg"><h2 id="nev">Hawaii pizza</h2><p>Összetevők: pizzaszósz, Mozzarella, Főtt Sonka, Ananász, Oregano</p><p>Méret: 24 cm</p><p>Ár: 2.500 Ft</p><input type="number" name="Mennyiség" id="q5" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Hawaii pizza",Number(document.getElementById("q5").value),3570); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="kepek/Capricciosa.jpg"><h2 id="nev">Capriccoiosa pizza</h2><p>Összetevők:Paradicsomos Alap, Mozzarellat, Főtt Sonka, Gomba, Articsóka, Fekete Oliva </p><p>Méret: 24 cm</p><p>Ár: 2.500 Ft</p><input type="number" name="Mennyiség" id="q6" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Capriccoiosa pizza",Number(document.getElementById("q6").value),3570); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="kepek/Ungereshe.jpg"><h2 id="nev">Ungereshe pizza</h2><p>Összetevők:Paradicsomos Alap, Mozzarella, Főtt Sonka, Lilahagyma, Főtt Tojás, Csípős Paprika</p><p>Méret: 24 cm</p><p>Ár: 2.500 Ft</p><input type="number" name="Mennyiség" id="q7" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Ungereshe pizza",Number(document.getElementById("q7").value),3570); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="kepek/Sonkas-Juhturos.jpg"><h2 id="nev">Sonkás Juhtúrós pizza</h2><p>Összetevők:Paradicsomos Alap, Mozzarella, Főtt Sonka, Juhtúró, Zöldbors, Oliva Olaj</p><p>Méret: 24 cm</p><p>Ár: 2.500 Ft</p><input type="number" name="Mennyiség" id="q8" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Sonkás Juhtúrós pizza", document.getElementById("q8").value, 3570); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="kepek/Bolognai.jpg"><h2 id="nev">Bolognai pizza</h2><p>Összetevők:Milánói Ragu, Mozzarella</p><p>Méret: 24 cm</p><p>Ár: 2.500 Ft</p><input type="number" name="Mennyiség" id="q9" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Bolognai pizza",Number(document.getElementById("q9")).value,3570); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="kepek/Marinara.jpg"><h2 id="nev">Marinara pizza</h2><p>Összetevők:Paradicsomos Alap, Fokhagyma, Oliva Olaj</p><p>Méret: 24 cm</p><p>Ár: 2.500 Ft</p><input type="number" name="Mennyiség" id="q10" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Marinara pizza", Number(document.getElementById("q10")).value, 3570); alert("Kosárhoz adva!")'>Kosárba</button></div>
+    </div>
+</body>
+</html>
