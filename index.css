@@ -88,10 +88,10 @@ body{
     margin-right: 25%;
 }
 #rolunk{
+    width: 800px;
     text-align: center;
     margin-left: 30%;
-    margin-right: 25%;
-    width: 830px;
+    margin-right: 15%;
 }
 #rendeles img{
     height: 150px;
