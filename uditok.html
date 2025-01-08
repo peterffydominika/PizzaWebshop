@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzák</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="kepek/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="kepek/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="kepek/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="kepek/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="kepek/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="kepek/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="kepek/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="kepek/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="kepek/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="kepek/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="kepek/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="kepek/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="kepek/favicon/favicon-16x16.png">
+    <link rel="manifest" href="kepek/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="index.js"></script>
+
+</head>
+<body style="background-color:#B22222;">
+    <script>
+        // Amikor a felhasználó elér egy bizonyos pontot az oldalon, a felfele nyíl gomb megjelenik
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("felfele-gomb").style.display = "block";
+            } else {
+                document.getElementById("felfele-gomb").style.display = "none";
+            }
+        }
+
+        // Amikor a felhasználó megnyomja a gombot, az oldal felgörget a tetejére
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <button onclick="scrollToTop()" id="felfele-gomb" title="Feljebb" style="font-size: 150%;">
+        👆
+    </button>
+    <ul >
+        <div class="user_option">
+            <a href="index.html" class="klink" style="background-color: rgb(90, 21, 21);">
+                Kezdőlap
+            </a>
+            <a href="index.html" class="klink" style="background-color: rgb(90, 21, 21);">
+                Főoldal
+            </a>
+            <a href="kosar.html" class="klink" style="background-color: rgb(90, 21, 21);">
+                Kosár
+            </a>
+            <a href="reg.html" class="klink" style="background-color: rgb(90, 21, 21);">
+                Regisztráció
+            </a>
+            <a href="bej.html" class="klink" style="background-color: rgb(90, 21, 21);">
+                Bejelentkezés
+            </a>
+            <a href="rendeles.html" class="klink" style="background-color: rgb(90, 21, 21);">
+                Vissza
+            </a>
+        </div>
+    </ul>
+     <div class="content">
+        <div class="boxt"><img src="kepek/coca.jpg"><h2 id="nev">Coca-Cola</h2><p> </p><p>0.5L</p><p>570 Ft</p><input type="number" name="Mennyiség" id="q1" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Coca-Cola",Number(document.getElementById("q1").value),570); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="kepek/fanta.jpg"><h2 id="nev">Fanta</h2><p> </p><p>0.5L</p><p>570 Ft</p><input type="number" name="Mennyiség" id="q2" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Fanta",Number(document.getElementById("q2").value),570); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="kepek/sprite.jpg"><h2 id="nev">Sprite</h2><p> </p><p>0.5L</p><p>570 Ft</p><input type="number" name="Mennyiség" id="q3" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Sprite",Number(document.getElementById("q3").value),570); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="kepek/pepsi.jpg"><h2 id="nev">Pepsi</h2><p> </p><p>0.5L</p><p>570 Ft</p><input type="number" name="Mennyiség" id="q4" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Pepsi",Number(document.getElementById("q4").value),570); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="kepek/kinley.jpg"><h2 id="nev">Kinley</h2><p> </p><p>0.5L</p><p>570 Ft</p><input type="number" name="Mennyiség" id="q5" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Kinley",Number(document.getElementById("q5").value),570); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="kepek/almale.jpg"><h2 id="nev">Almalé</h2><p> </p><p>0.5L</p><p>570 Ft</p><input type="number" name="Mennyiség" id="q6" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Almalé",Number(document.getElementById("q6").value),570); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="kepek/barackle.jpg"><h2 id="nev">Baracklé</h2><p> </p><p>0.5L</p><p>570 Ft</p><input type="number" name="Mennyiség" id="q7" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Baracklé",Number(document.getElementById("q7").value),570); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="kepek/narancsle.png"><h2 id="nev">Narancslé</h2><p> </p><p>0.5L</p><p>570 Ft</p><input type="number" name="Mennyiség" id="q8" placeholder="Kívánt mennyiség"><button type="submit" onclick='kosarba("Narancslé", document.getElementById("q8").value, 570); alert("Kosárhoz adva!")'>Kosárba</button></div>
+    </div>
+</body>
+</html>
