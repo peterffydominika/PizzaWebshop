@@ -84,7 +84,7 @@
             <p>CVV:</p>
             <input  id="kos" type="text" placeholder="123" required> <br>
             <input type="checkbox" required>Elfogadom az ÁSZF <br>
-            <input type="checkbox" required>Házhozszállítás(+1500Ft) <br>
+            <input type="checkbox" id="szallitas" onclick='kosarba("Házhozszállítás","Number(1)",1500)'>Házhozszállítás(+1500Ft) <br>
             <br>Rendelés leadása: <input style="font-size: 100%;" type="submit" onclick="fizetes()">
             <br>
             
@@ -99,13 +99,12 @@
         </table>
         <br>
         <div class="visa">
-        <p style="background-color: rgb(63, 10, 10); width: 500px; margin: auto; font-size: 200%;">Elfogadott fizetési lehetőségek:</p>
+        <p style="background-color: rgb(63, 10, 10); width: 500px; margin: auto; font-size: 200%; color: white;">Elfogadott fizetési lehetőségek:</p>
         <img src="kepek/visa.png" style="width: 170px; height: 100px;"><p style="background-color: rgb(63, 10, 10); width: 200px; margin: auto; font-size: 210%;">Utánvét</p>
         </div>
         <button onclick="scrollToTop()" id="felfele-gomb" title="Feljebb" style="font-size: 150%;">
             👆
         </button>
     </div>
-    <script src="tap.js"></script>
 </body>
 </html>
